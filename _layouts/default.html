@@ -4,16 +4,25 @@
 			<title>{{ page.title }}</title>
 			<link rel="stylesheet" type="text/css" href="{{css('css/app.css') }}">	
 		</head>
-			<body>			
-			<div class="container">
-				<script src="nav.html"></script>	
+			<body>		
+				<nav>
+	    				<ul id="menu">
+	        				<li><a href="{{ "index.html" | absolute_url }}">Maison</a></li>
+		        			<li><a href="{{ "/topics/page1.html" | absolute_url }}">Page 1</a></li>
+	        				<li><a href="{{ "/topics/page2.html" | absolute_url }}">Page 2</a></li>
+						<li><a href="{{ "/topics/page3.html" | absolute_url }}">Page 3</a></li>
+	    				</ul>
+				</nav>
+				
+				<div class="container">
 					{{ content }}
-			</div><!-- /.container -->
-			<footer>
-	    		<p>
-				{% assign url = "https://github.com/daily-frenchy" %}
-				<a href="{{ site.baseurl | prepend: url }}">Regarde moi  cela !</a>
-				</p>
-			</footer>
-		</body>
+				</div><!-- /.container -->
+			
+				<footer>
+	    				<p>
+						{% assign url = "https://github.com/daily-frenchy" %}
+							<a href="{{ site.baseurl | prepend: url }}">Regarde moi  cela !</a>
+					</p>
+				</footer>
+			</body>
 	</html>
