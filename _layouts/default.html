@@ -6,7 +6,9 @@
 		</head>
 			<body>			
 			<div class="container">
-				{{ % include /nav.html % }}	
+				{% if navbar %}
+  					{% include {{ navbar }} %}
+				{% endif %}	
 					{{ content }}
 			</div><!-- /.container -->
 			<footer>
