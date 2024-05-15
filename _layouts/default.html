@@ -4,14 +4,10 @@
 			<title>{{ page.title }}</title>
 			<link rel="stylesheet" type="text/css" href="{{css('css/app.css') }}">	
 		</head>
-			<body>
-				{{ % include /nav.html % }}	
-
-				
+			<body>			
 			<div class="container">
-			
-			{{ content }}
-			
+				{{ % include /nav.html % }}	
+					{{ content }}
 			</div><!-- /.container -->
 			<footer>
 	    		<p>
